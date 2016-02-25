@@ -5,3 +5,80 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+}
+body {
+    font: 14px/1.4 Arial, sans-serif;
+    background-color: #999;
+}
+.main-wrapper {
+    width: 90%;
+    height: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    background-color: #eee;
+    color: #333;
+}
+.header {
+    padding: 0 0 20px;
+    font-size: 22px;
+}
+p, li {
+    margin-bottom: 10px;
+}
+li span {
+    color: #1F0202;
+    font-weight: bold;
+}
+.work-block {
+    width: 100px;
+    float: left;
+}
+.description {
+    margin-left: 120px;
+}
+.input-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+label {
+    display: block;
+    padding: 3px 0 0 35px;
+    cursor: pointer;
+}
+input[type="checkbox"],
+input[type="checkbox"]:before,
+input[type="checkbox"]:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+}
+input[type="checkbox"]:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #999;
+    border: 1px solid #929090;
+    border-radius: 3px;
+    z-index: 2;
+}
+input[type="checkbox"]:after {
+    content: 'v';
+    font-size: 20px;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 6px;
+    color: #fff;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s;
+}
+input[type="checkbox"]:checked:after {
+    opacity: 1;
+}

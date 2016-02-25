@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Loved input's elements</title>
+    <title>Стилизайия check-box и radio-button</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<div class="main-wrapper">
+    <p class="header">Стилизайия check-box и radio-button при помощи псевдоєлементов</p>
 
-<script src="js/jquery.js"></script>
-<script src="js/app.js"></script>
+    <div class="work-block">
+        <div class="input-group">
+            <input type="checkbox" id="chb-1" name="option1" value="o1">
+            <label for="chb-1">Да</label>
+        </div>
+
+        <div class="input-group">
+            <input type="checkbox" id="chb-2" name="option2" value="o2">
+            <label for="chb-2">Нет</label>
+        </div>
+    </div>
+
+    <div class="description">
+        <p><strong>Данная методика одинаково применима как к check-box, так и к radio-button.</strong></p>
+        <ol>
+            <li>инпут и лейблу оборачиваем в какую-нибудь обертку и даем ей <span>position: relative</span>;</li>
+            <li>check-box (radio-button), псевдо-элементам before и after - задаем <span>position: absolute</span>;</li>
+            <li>принцип следующий: check-box накрываем before, стилизируем after и скрываем, например через <span>opacity</span>, а при псевдо-элементе checked - отображаем, т.е.
+                <span>input[type="checkbox"]:checked:after {opacity: 1;}</span></li>
+            <li>в место птички может быть все что угодно: картинка, символ, текст, геометрическая фигура - ограничение только в вашей фантазии</li>
+        </ol>
+    </div>
+</div>
 </body>
 </html>
